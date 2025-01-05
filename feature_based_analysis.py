@@ -1,5 +1,6 @@
 # Proje için kullanılan dosya
 # feature_based_analysis.py dosyası, duygu analizi ve metin sınıflandırma için gelişmiş özellik çıkarımı ve analizini içerir
+# Bu dosyayı çalıştırarak duygu analizi ve metin sınıflandırma işlemlerini gerçekleştirebilirsiniz
 
 # Gerekli kütüphaneleri import et
 import pandas as pd
