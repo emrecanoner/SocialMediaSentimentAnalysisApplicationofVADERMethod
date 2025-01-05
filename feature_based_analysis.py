@@ -1,5 +1,5 @@
 # Proje için kullanılan dosya
-# feature_based_analysis.py
+# feature_based_analysis.py dosyası, duygu analizi ve metin sınıflandırma için gelişmiş özellik çıkarımı ve analizini içerir
 
 # Gerekli kütüphaneleri import et
 import pandas as pd
@@ -791,6 +791,7 @@ class SentimentFeatureAnalyzer:
             
             # Grid Search
             rf = RandomForestClassifier(random_state=42)
+            from sklearn.model_selection import GridSearchCV
             grid_search = GridSearchCV(
                 estimator=rf,
                 param_grid=param_grid,
@@ -805,6 +806,7 @@ class SentimentFeatureAnalyzer:
         # 3. Cross-validation iyileştirmesi
         def improved_cross_validation(self, X, y):
             # Stratified K-Fold
+            from sklearn.model_selection import StratifiedKFold
             skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
             
             # Sonuçları sakla
